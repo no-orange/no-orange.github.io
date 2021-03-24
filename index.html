@@ -152,112 +152,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Java学习记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/24/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">Java学习记录</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/24/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="archive-article-date">
-  	<time datetime="2021-03-24T06:45:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>第一章，我的blog<br>/*<br>给定一个正整数，编写程序计算有多少对质数的和等于输入的这个正整数，并输出结果。输入值小于1000。<br>如，输入为10, 程序应该输出结果为2。（共有两对质数的和为10，分别为(5, 5) , (3, 7)）。<br>输入<br>输入一个整数n( 3≤n&lt;1000)。<br>输出<br>输出对数。<br>样例输入<br>10<br>样例输出<br>2</p>
-<p>10  【3,7】、【5,5】  2<br>12  【1,11】、【5,7】 2<br>15  【2,13】  1<br>20  【1,19】、【3,17】、【7,13】<br> */<br>package study01;</p>
-<p>import java.util.Scanner;</p>
-<p>public class demo01 {<br>    public static void main(String[] args) {<br>        Scanner sc = new Scanner(System.in);<br>        int num = sc.nextInt(); //键盘获取输入的num值<br>        int count = 0; //定义一个count，用来记录最后有几个质数对</p>
-<pre><code>    int a = 1;//定义两个数，它们的和为num
-    int b = num - a;
-
-    //循环从1开始到中间那个数，排除了  例如num=10，有【3,7】，【7,3】这样的重复
-    while( a!= (num/2 + 1) ) &#123;
-        if (sushu ( a ) &amp;&amp; sushu ( b )) &#123;
-            count ++; //如果a,b都是素数，则计数器加一
-            System.out.println(&quot;[&quot;+a+&quot;,&quot;+b+&quot;]  &quot;);
-        &#125;
-        a++; //循环一次后a++,b--，进行下次循环,满足条件后跳出循环
-        b--;
-        //System.out.println(a+&quot;   &quot;+b);
-    &#125;
-    System.out.println(count);  //输出结果
-
-
-&#125;
-//素数：除了1和它本身外不能被其他数整除的数叫做素数。
-//判断的方法是从2到num-1，遍历看能不能被整除，如果能被其中的一个整除，则不是素数，如果都不可以整除，那么就不是素数。
-
-//用来判断一个数是否为素数，如果是素数则返回true，如果不是素数则返回false
-public static boolean sushu(int num) &#123;
-    if (num == 2 ||num == 1) &#123; //如果num刚好为2，则判定直接为素数
-        return true;
-    &#125; else &#123;
-        for (int i = 2; i &lt; num; i++) &#123;
-            if (num % i == 0) &#123;
-                return false;
-            &#125;else&#123; //这里特别注意一定要讲循环走完一圈才可以出去，否则判断一次后循环就会结束。
-                if(i==num-1)&#123;
-                    return true; //判定i==num-1时才是循环了一圈，所以结束循环
-                &#125;else
-                    continue; //否则跳过此次循环进行下一次循环
-            &#125;
-        &#125;
-        return false;
-    &#125;
-&#125;
-</code></pre>
-<p>}</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/24/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -265,13 +159,13 @@ public static boolean sushu(int num) &#123;
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/23/hello-world/">Hello World</a>
+      <a class="article-title" href="/2021/03/24/hello-world/">Hello World</a>
     </h1>
   
 
         
-        <a href="/2021/03/23/hello-world/" class="archive-article-date">
-  	<time datetime="2021-03-23T13:59:26.789Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-23</time>
+        <a href="/2021/03/24/hello-world/" class="archive-article-date">
+  	<time datetime="2021-03-24T07:02:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-24</time>
 </a>
         
       </header>
@@ -303,7 +197,100 @@ public static boolean sushu(int num) &#123;
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/23/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/03/24/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Java学习记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/24/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">Java学习记录</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/24/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="archive-article-date">
+  	<time datetime="2021-03-24T06:45:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="算法设计与分析实验一"><a href="#算法设计与分析实验一" class="headerlink" title="算法设计与分析实验一"></a>算法设计与分析实验一</h2><h3 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h3><h6 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">给定一个正整数，编写程序计算有多少对质数的和等于输入的这个正整数，并输出结果。输入值小于1000。</span><br><span class="line">如，输入为10, 程序应该输出结果为2。（共有两对质数的和为10，分别为(5, 5) , (3, 7)）。</span><br><span class="line">输入</span><br><span class="line">输入一个整数n( 3≤n&lt;1000)。</span><br><span class="line">输出</span><br><span class="line">输出对数。</span><br><span class="line">样例输入</span><br><span class="line">10</span><br><span class="line">样例输出</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+
+<h6 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">10  【3,7】、【5,5】  2</span><br><span class="line">12  【1,11】、【5,7】 2</span><br><span class="line">15  【2,13】  1</span><br><span class="line">20  【1,19】、【3,17】、【7,13】 3</span><br></pre></td></tr></table></figure>
+<h6 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1、写一个方法来判断一个数是不是素数</span><br><span class="line"></span><br><span class="line">2、从头开始遍历，判断每一个数是否满足条件</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">package study01;</span><br><span class="line"></span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class demo01 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Scanner sc = new Scanner(System.in);</span><br><span class="line">        int num = sc.nextInt(); //键盘获取输入的num值</span><br><span class="line">        int count = 0; //定义一个count，用来记录最后有几个质数对</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        int a = 1;//定义两个数，它们的和为num</span><br><span class="line">        int b = num - a;</span><br><span class="line"></span><br><span class="line">        //循环从1开始到中间那个数，排除了  例如num=10，有【3,7】，【7,3】这样的重复</span><br><span class="line">        <span class="keyword">while</span>( a!= (num/2 + 1) ) &#123;</span><br><span class="line">            <span class="keyword">if</span> (sushu ( a ) &amp;&amp; sushu ( b )) &#123;</span><br><span class="line">                count ++; //如果a,b都是素数，则计数器加一</span><br><span class="line">                System.out.println(<span class="string">&quot;[&quot;</span>+a+<span class="string">&quot;,&quot;</span>+b+<span class="string">&quot;]  &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            a++; //循环一次后a++,b--，进行下次循环,满足条件后跳出循环</span><br><span class="line">            b--;</span><br><span class="line">            //System.out.println(a+<span class="string">&quot;   &quot;</span>+b);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(count);  //输出结果</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    //素数：除了1和它本身外不能被其他数整除的数叫做素数。</span><br><span class="line">    //判断的方法是从2到num-1，遍历看能不能被整除，如果能被其中的一个整除，则不是素数，如果都不可以整除，那么就不是素数。</span><br><span class="line"></span><br><span class="line">    //用来判断一个数是否为素数，如果是素数则返回<span class="literal">true</span>，如果不是素数则返回<span class="literal">false</span></span><br><span class="line">    public static boolean sushu(int num) &#123;</span><br><span class="line">        <span class="keyword">if</span> (num == 2 ||num == 1) &#123; //如果num刚好为2，则判定直接为素数</span><br><span class="line">            <span class="built_in">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">for</span> (int i = 2; i &lt; num; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (num % i == 0) &#123;</span><br><span class="line">                    <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123; //这里特别注意一定要讲循环走完一圈才可以出去，否则判断一次后循环就会结束。</span><br><span class="line">                    <span class="keyword">if</span>(i==num-1)&#123;</span><br><span class="line">                        <span class="built_in">return</span> <span class="literal">true</span>; //判定i==num-1时才是循环了一圈，所以结束循环</span><br><span class="line">                    &#125;<span class="keyword">else</span></span><br><span class="line">                        <span class="built_in">continue</span>; //否则跳过此次循环进行下一次循环</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h6 id="总结以及心得"><a href="#总结以及心得" class="headerlink" title="总结以及心得"></a>总结以及心得</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、循环判断数的时候，为了避免【7，3】、【3,7】这种相同的情况，因此只需要判断到一半的位置即可。</span><br><span class="line">2、判断一个数是否为素数的时候，只遍历除了1和这个数本身之外的其他数，能否被自己整除即可。如果可以被整除，那么就不是素数。如果不可以被整除，那么就是素数。</span><br><span class="line">注意2是一个特殊情况，需要单独考虑。</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">基础学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/24/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">展开全文 >></a>
         </p>
       
 
@@ -424,6 +411,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">基础学习</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
