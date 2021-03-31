@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021 | Hexo</title>
+  <title>基数排序 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2021/index.html">
+  <meta name="description" content="概念1待补充">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基数排序">
+<meta property="og:url" content="http://example.com/2021/03/31/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="概念1待补充">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-03-31T14:23:41.000Z">
+<meta property="article:modified_time" content="2021-03-31T14:35:32.516Z">
 <meta property="article:author" content="zcd">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -156,36 +161,65 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-基数排序" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      基数排序
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/31/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+
+        
+        <a href="/2021/03/31/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/" class="archive-article-date">
   	<time datetime="2021-03-31T14:23:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-31</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/31/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/">基数排序</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">待补充</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 
-        <div class="article-info info-on-right">
-          
+<h3 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h3><h6 id="主方法"><a href="#主方法" class="headerlink" title="主方法"></a>主方法</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class Demo &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        int number = 0;//数组B的下标</span><br><span class="line">        int k = 1;//看第k位，从（倒数）第一位开始看</span><br><span class="line">        int Max = 0;//数组当中最大的数有几位</span><br><span class="line">        int count = 0;</span><br><span class="line"></span><br><span class="line">        Scanner sc = new Scanner(System.in);</span><br><span class="line">        System.out.print(<span class="string">&quot;请输入要排序的数的数量：&quot;</span>);</span><br><span class="line">        count = sc.nextInt();</span><br><span class="line"></span><br><span class="line">        int[] arrayA = new int[count];</span><br><span class="line">        int[] arrayB = new int[arrayA.length];</span><br><span class="line"></span><br><span class="line">        System.out.print(<span class="string">&quot;请输入&quot;</span>+count+<span class="string">&quot;个数：&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span>(int i = 0;i &lt; count;i++)&#123;</span><br><span class="line">            arrayA[i] = sc.nextInt();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        //int[] arrayC = new int[arrayA.length];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        //求最高位数</span><br><span class="line">        <span class="keyword">for</span>(int i = 0; i &lt;arrayA.length;i++)&#123;</span><br><span class="line">            int temp = getMax(arrayA[i]);</span><br><span class="line">            <span class="keyword">if</span>(temp &gt;= Max)&#123;</span><br><span class="line">                Max = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        //System.out.println(Max);//最高位数</span><br><span class="line"></span><br><span class="line">        //打印输出原始数组</span><br><span class="line">        System.out.print(<span class="string">&quot;原始素组为:&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (int i = 0; i &lt; arrayA.length; i++) &#123;</span><br><span class="line">            System.out.print(arrayA[i]+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">        //基数排序</span><br><span class="line">        <span class="keyword">while</span>(k != Max+1)&#123;</span><br><span class="line">            int p = 0;//判断循环是否结束</span><br><span class="line">            <span class="keyword">for</span>(int i = 0;i &lt;=9 ;i++)&#123;//0~9是第几位的范围</span><br><span class="line">                <span class="keyword">for</span>(int j = 0;j &lt;arrayA.length;j++)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(getNum(arrayA[j],k) == i)&#123;</span><br><span class="line">                        arrayB[number] = arrayA[j];</span><br><span class="line">                        number++;//数组B的下标要单独定义，每次赋值后都需要移动到下一个下标</span><br><span class="line">                        <span class="keyword">if</span>(number == arrayA.length)&#123;</span><br><span class="line">                            <span class="built_in">break</span>;//如果数组B已经满了，则提前结束循环</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(number == arrayA.length)&#123;//数组B存满后</span><br><span class="line">                    number = 0;//重置数组B的下标</span><br><span class="line">                    //System.out.println(<span class="string">&quot;k:&quot;</span>+k);</span><br><span class="line">                    k++;//看的位数进行移动</span><br><span class="line"></span><br><span class="line">                    /*</span><br><span class="line">					//将原本的A数组给数组C</span><br><span class="line">                    <span class="keyword">for</span> (i = 0; i &lt; arrayA.length; i++) &#123;</span><br><span class="line">                        arrayC[i] = arrayA[i];</span><br><span class="line">                    &#125;</span><br><span class="line">					*/</span><br><span class="line"></span><br><span class="line">                    //将新的数组B重新赋值给arrayA</span><br><span class="line">                    <span class="keyword">for</span> (i = 0; i &lt; arrayA.length; i++) &#123;</span><br><span class="line">                        arrayA[i] = arrayB[i];</span><br><span class="line">                    &#125;</span><br><span class="line">                    //打印输出</span><br><span class="line">                    System.out.print(<span class="string">&quot;第&quot;</span>+(k-1)+<span class="string">&quot;轮输出：&quot;</span>);//因为前面提前k++了，所以应该是k-1轮。</span><br><span class="line">                    <span class="keyword">for</span> (i = 0; i &lt; arrayA.length; i++) &#123;</span><br><span class="line">                        System.out.print(arrayA[i]+<span class="string">&quot; &quot;</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    System.out.println();</span><br><span class="line">                    <span class="built_in">break</span>;//数组B满了后这个循环也要提前结束</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            //错误，不能这么判断，否则若在还没排完前一样的时候会提前结束</span><br><span class="line">            //判断数组B、C是否一样，如果一样，则提前结束循环</span><br><span class="line">            /</span><br><span class="line">			*<span class="keyword">for</span>(int i = 0;i &lt;arrayA.length;i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(arrayA[i] == arrayC[i])&#123;</span><br><span class="line">                    p++;//1+1+1+1=arrayA.length</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(p == arrayA.length)&#123;</span><br><span class="line">                <span class="built_in">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">			*/</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="方法1：给定一个数num，返回该数的倒数第k个数，例如-num-231-k-2-则返回-3"><a href="#方法1：给定一个数num，返回该数的倒数第k个数，例如-num-231-k-2-则返回-3" class="headerlink" title="方法1：给定一个数num，返回该数的倒数第k个数，例如 num = 231, k = 2,则返回 3"></a>方法1：给定一个数num，返回该数的倒数第k个数，例如 num = 231, k = 2,则返回 3</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public static int getNum(int num, int k) &#123;</span><br><span class="line">    int count = 0;</span><br><span class="line">    <span class="keyword">while</span>(k != 0) &#123;</span><br><span class="line">        count = num % 10;</span><br><span class="line">        num = num / 10;</span><br><span class="line">           /* <span class="keyword">if</span>(num == 0)&#123;</span><br><span class="line">                <span class="built_in">break</span>;</span><br><span class="line">            &#125;*/</span><br><span class="line">        k--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="方法2：得到一个数有几位"><a href="#方法2：得到一个数有几位" class="headerlink" title="方法2：得到一个数有几位"></a>方法2：得到一个数有几位</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">    public static int getMax(int array)&#123;</span><br><span class="line">        int count = 0;//计数器</span><br><span class="line">        <span class="keyword">while</span> (array != 0)&#123;</span><br><span class="line">            array = array/10;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1、基数排序的原理比较简单，但是代码实现起来比较复杂。</span><br><span class="line">2、</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -197,99 +231,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/31/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/24/hello-world/" class="archive-article-date">
-  	<time datetime="2021-03-24T07:02:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/03/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/24/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/24/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="archive-article-date">
-  	<time datetime="2021-03-24T06:45:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/24/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">Java学习记录</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">基础学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -312,8 +353,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
