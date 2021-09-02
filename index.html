@@ -158,6 +158,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Spring的REST问题总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/09/02/Spring%E7%9A%84REST%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">Spring的REST问题总结</a>
+    </h1>
+  
+
+        
+        <a href="/2021/09/02/Spring%E7%9A%84REST%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" class="archive-article-date">
+  	<time datetime="2021-09-02T06:59:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="如何初始化设置Rest风格"><a href="#如何初始化设置Rest风格" class="headerlink" title="如何初始化设置Rest风格"></a>如何初始化设置Rest风格</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">发起图书的增删改查，使用Rest风格的URL地址</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">请求URL 请求方式      表示含义</span></span><br><span class="line"><span class="comment">/book/1 GET        查询1号图书</span></span><br><span class="line"><span class="comment">/book/1 POST       添加1号图书</span></span><br><span class="line"><span class="comment">/book/1 DELETE     删除1号图书</span></span><br><span class="line"><span class="comment">/book/1 PUT        更新1号图书</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">如何从页面发起PUT、DELETE请求？</span></span><br><span class="line"><span class="comment">    Spring提供了对Rest风格的支持</span></span><br><span class="line"><span class="comment">    1. SpringMVC中有一个Filter，它可以把普通的请求转化为规定形式的请求</span></span><br><span class="line"><span class="comment">        1.1 在web.xml中配置Filter</span></span><br><span class="line"><span class="comment">            &lt;filter&gt;</span></span><br><span class="line"><span class="comment">                &lt;filter-name&gt;HiddenHttpMethodFilter&lt;/filter-name&gt;</span></span><br><span class="line"><span class="comment">                &lt;filter-class&gt;org.springframework.web.filter.HiddenHttpMethodFilter&lt;/filter-class&gt;</span></span><br><span class="line"><span class="comment">            &lt;/filter&gt;</span></span><br><span class="line"><span class="comment">            &lt;filter-mapping&gt;</span></span><br><span class="line"><span class="comment">                &lt;filter-name&gt;HiddenHttpMethodFilter&lt;/filter-name&gt;</span></span><br><span class="line"><span class="comment">                &lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span></span><br><span class="line"><span class="comment">            &lt;/filter-mapping&gt;</span></span><br><span class="line"><span class="comment">    2. 如何发起其他形式请求？</span></span><br><span class="line"><span class="comment">        按照一下要求</span></span><br><span class="line"><span class="comment">        2.1 创建一个POST类型的表单</span></span><br><span class="line"><span class="comment">        2.2 表单项中携带一个_method的参数</span></span><br><span class="line"><span class="comment">        2.3 这个_method的值就是DELETE或者PUT</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2021/09/02/Spring%E7%9A%84REST%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SpringMVC</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/09/02/Spring%E7%9A%84REST%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-SpringMVC配置的一些问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -854,102 +930,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/05/04/%E6%B3%9B%E5%9E%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java集合" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/27/Java%E9%9B%86%E5%90%88/">Java集合</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/27/Java%E9%9B%86%E5%90%88/" class="archive-article-date">
-  	<time datetime="2021-04-27T12:53:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Java集合框架概述"><a href="#Java集合框架概述" class="headerlink" title="Java集合框架概述"></a>Java集合框架概述</h1><h2 id="集合框架的概述"><a href="#集合框架的概述" class="headerlink" title="集合框架的概述"></a>集合框架的概述</h2><ol>
-<li><p>集合、数组都是对多个数据进行存储操作的结构，简称Java容器。</p>
-<blockquote>
-<p>说明：此时的存储，主要指的是内存层面的存储，不涉及到持久化的存储（.txt,.jpg,.avi，数据库中）</p>
-</blockquote>
-</li>
-<li><p>数组在存储多个数据方面的特点：</p>
-<ol>
-<li> 一旦初始化以后，其长度就确定了。</li>
-<li>数组一旦定义好，其元素的类型也就确定了。我们也就只能操作指定类型的数据了。 比如：String[] arr; int[] arr1;Object[] arr2;</li>
-</ol>
-</li>
-<li><p>数组在存储多个数据方面的缺点：</p>
-<ol>
-<li>一旦初始化以后，其长度就不可修改。</li>
-<li>数组中提供的方法非常有限，对于添加、删除、插入数据等操作，非常不便，同时效率不高。</li>
-<li>获取数组中实际元素的个数的需求，数组没有现成的属性或方法可用</li>
-<li>数组存储数据的特点：有序、可重复。对于无序、不可重复的需求，不能满足。</li>
-</ol>
-</li>
-</ol>
-        
-          <a class="article-more-a" href="/2021/04/27/Java%E9%9B%86%E5%90%88/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/27/Java%E9%9B%86%E5%90%88/">展开全文 >></a>
         </p>
       
 
