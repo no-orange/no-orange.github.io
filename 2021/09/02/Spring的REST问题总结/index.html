@@ -16,7 +16,7 @@
 <meta property="og:description" content="如何初始化设置Rest风格123456789101112131415161718192021222324252627&#x2F;*发起图书的增删改查，使用Rest风格的URL地址请求URL 请求方式      表示含义&#x2F;book&#x2F;1 GET        查询1号图书&#x2F;book&#x2F;1 POST       添加1号图书&#x2F;book&#x2F;1 DELETE     删除1号图书&#x2F;book&#x2F;1 PUT        更新">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-09-02T06:59:09.000Z">
-<meta property="article:modified_time" content="2021-09-02T07:07:02.216Z">
+<meta property="article:modified_time" content="2021-09-02T12:41:21.965Z">
 <meta property="article:author" content="zcd">
 <meta property="article:tag" content="SpringMVC">
 <meta name="twitter:card" content="summary">
@@ -190,6 +190,34 @@
 <p>一般发送在高版本的Tomcat服务器中</p>
 <p>解决方案：在跳转的 jsp 头中添加 isErrorPage=”true” 即可解决</p>
 </blockquote>
+<h4 id="获取中文数据乱码"><a href="#获取中文数据乱码" class="headerlink" title="获取中文数据乱码"></a>获取中文数据乱码</h4><blockquote>
+<p>从页面中获取中文数据的时候，打印出来的数据时乱码</p>
+<p>解决方案：在web.xml中添加filter过滤器同时修改Tomcat配置中的server.xml</p>
+<ol>
+<li>```xml<!--配置中文编码的过滤器
+        必须放在所有的过滤器之前才能生效
+-->
+<filter>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <!-- encoding：指定解决POST请求乱码 -->
+    <init-param>
+        <param-name>encoding</param-name>
+        <param-value>UTF-8</param-value>
+    </init-param>
+    <!-- forceEncoding：顺手解决响应乱码 -->
+    <init-param>
+        <param-name>forceEncoding</param-name>
+        <param-value>true</param-value>
+    </init-param>
+</filter>
+<filter-mapping>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. &#96;&#96;&#96;java</span><br><span class="line">   &#x2F;*</span><br><span class="line">       提交的数据可能有乱码：</span><br><span class="line">           请求乱码：</span><br><span class="line">               GET请求：改Tomcat下conf文件下的server.xml</span><br><span class="line">                   &lt;Connector URIEncoding&#x3D;&quot;UTF-8&quot; port&#x3D;&quot;8080&quot; protocol&#x3D;&quot;HTTP&#x2F;1.1&quot; connectionTimeout&#x3D;&quot;20000&quot; redirectPort&#x3D;&quot;8443&quot; &#x2F;&gt;</span><br><span class="line">               POST请求：</span><br><span class="line">                   在第一次获取请求参数前设置</span><br><span class="line">                   request.setCharacterEncoding(&quot;UTF-8&quot;)</span><br><span class="line">                   自己写一个filter,SpringMVC有这个filter</span><br><span class="line">           响应乱码：</span><br><span class="line">               response.setContentType(&quot;text&#x2F;html;charset&#x3D;utf-8&quot;)</span><br><span class="line">    *&#x2F;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
 
       
 
@@ -294,6 +322,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2021/09/05/SpringMVC%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          SpringMVC项目初始化
+        
+      </div>
+    </a>
+  
   
     <a href="/2021/09/01/SpringMVC%E9%85%8D%E7%BD%AE%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">SpringMVC配置的一些问题</div>
@@ -323,7 +360,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%BE%E7%BD%AERest%E9%A3%8E%E6%A0%BC"><span class="toc-number">1.</span> <span class="toc-text">如何初始化设置Rest风格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">常见问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#jsp%E9%A1%B5%E9%9D%A2%E8%A2%AB%E6%8B%A6%E6%88%AA"><span class="toc-number">2.1.</span> <span class="toc-text">jsp页面被拦截</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%BE%E7%BD%AERest%E9%A3%8E%E6%A0%BC"><span class="toc-number">1.</span> <span class="toc-text">如何初始化设置Rest风格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">常见问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#jsp%E9%A1%B5%E9%9D%A2%E8%A2%AB%E6%8B%A6%E6%88%AA"><span class="toc-number">2.1.</span> <span class="toc-text">jsp页面被拦截</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E4%B8%AD%E6%96%87%E6%95%B0%E6%8D%AE%E4%B9%B1%E7%A0%81"><span class="toc-number">2.2.</span> <span class="toc-text">获取中文数据乱码</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
