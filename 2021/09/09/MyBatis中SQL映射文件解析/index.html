@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | Hexo</title>
+  <title>MyBatis中SQL映射文件解析 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="xml中各属性的解析（不全，具体看视频或者官方文档）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MyBatis中SQL映射文件解析">
+<meta property="og:url" content="http://example.com/2021/09/09/MyBatis%E4%B8%ADSQL%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="xml中各属性的解析（不全，具体看视频或者官方文档）">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-09-09T13:16:00.000Z">
+<meta property="article:modified_time" content="2021-09-09T14:53:49.731Z">
 <meta property="article:author" content="zcd">
+<meta property="article:tag" content="MyBatis">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -156,36 +161,59 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-MyBatis中SQL映射文件解析" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      MyBatis中SQL映射文件解析
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/09/MyBatis%E4%B8%ADSQL%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/" class="archive-article-date">
+
+        
+        <a href="/2021/09/09/MyBatis%E4%B8%ADSQL%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/" class="archive-article-date">
   	<time datetime="2021-09-09T13:16:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-09</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/09/09/MyBatis%E4%B8%ADSQL%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/">MyBatis中SQL映射文件解析</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="xml中各属性的解析（不全，具体看视频或者官方文档）"><a href="#xml中各属性的解析（不全，具体看视频或者官方文档）" class="headerlink" title="xml中各属性的解析（不全，具体看视频或者官方文档）"></a>xml中各属性的解析（不全，具体看视频或者官方文档）</h1><span id="more"></span>
 
-        <div class="article-info info-on-right">
-          
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">mapper</span></span></span><br><span class="line"><span class="meta">        <span class="meta-keyword">PUBLIC</span> <span class="meta-string">&quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span></span></span><br><span class="line"><span class="meta">        <span class="meta-string">&quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">&quot;com.orange.dao.EmployeeDao&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- namespace：写dao接口的全类名 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 这个文件中能写的所有标签：</span></span><br><span class="line"><span class="comment">            cache：和缓存有关</span></span><br><span class="line"><span class="comment">            cache-ref：和缓存有关</span></span><br><span class="line"><span class="comment">            select、update、delete、insert</span></span><br><span class="line"><span class="comment">            parameterMap：参数map，废弃。原本是来做复杂参数映射</span></span><br><span class="line"><span class="comment">            resultMap：结果映射，自定义结果集的封装规则</span></span><br><span class="line"><span class="comment">            sql：抽取可重用的sql</span></span><br><span class="line"><span class="comment">     --&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">        现象：</span></span><br><span class="line"><span class="comment">            1. 单个参数</span></span><br><span class="line"><span class="comment">                    基本类型：</span></span><br><span class="line"><span class="comment">                        取值：#&#123;随便写&#125;</span></span><br><span class="line"><span class="comment">                    传入POJO</span></span><br><span class="line"><span class="comment">            2. 多个参数</span></span><br><span class="line"><span class="comment">                    public Employee getEmpByIdAndName(Integer id, String empName)</span></span><br><span class="line"><span class="comment">                        取值：#&#123;参数名&#125;无效</span></span><br><span class="line"><span class="comment">                        可用：arg0,arg1（参数的索引，从0开始）...</span></span><br><span class="line"><span class="comment">                             或者param1,param第几个参数paramN）...</span></span><br><span class="line"><span class="comment">                        原因：只要传入了多个参数，mybatis会自动的将这些参数封装在一个map中</span></span><br><span class="line"><span class="comment">                       封装时使用的可以就是参数的索引和参数的第几个表示</span></span><br><span class="line"><span class="comment">                       Map&lt;String,Object&gt; map = new HashMap&lt;&gt;();</span></span><br><span class="line"><span class="comment">                       map.put(&quot;1&quot;,传入的值);map.put(&quot;2&quot;,传入的值);</span></span><br><span class="line"><span class="comment">                       #&#123;key&#125;就是从这个map中取值</span></span><br><span class="line"><span class="comment">               我们可以告诉mybatis，封装参数map的时候使用我们指定的key</span></span><br><span class="line"><span class="comment">               用@param(&quot;指定的key&quot;)在参数上</span></span><br><span class="line"><span class="comment">            3. 传入了Map</span></span><br><span class="line"><span class="comment">					将多个要使用的参数封装到Map中</span></span><br><span class="line"><span class="comment">            4. 传入了POJO（JavaBean）</span></span><br><span class="line"><span class="comment">					取值：#&#123;POJO的属性名&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">			扩展：多个参数，自动封装map</span></span><br><span class="line"><span class="comment">			method(@param(&quot;id&quot;) Integer id, String empName, Employee employee);</span></span><br><span class="line"><span class="comment">			id -&gt; #&#123;id&#125;</span></span><br><span class="line"><span class="comment">			empName -&gt; #&#123;param2&#125;</span></span><br><span class="line"><span class="comment">			employee中的email -&gt; #&#123;param3.email&#125;</span></span><br><span class="line"><span class="comment">			无论传入什么样的参数都需要正确的取出！</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- public Employee getEmpById(Integer id) --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;getEmpById&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;com.orange.bean.Employee&quot;</span>&gt;</span></span><br><span class="line">        select * from t_employee where id = #&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- public Employee getEmpByIdAndName(Integer id, String empName) --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;getEmpByIdAndName&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;com.orange.bean.Employee&quot;</span>&gt;</span></span><br><span class="line">        select * from t_employee where id = #&#123;arg0&#125; and empname = #&#123;arg1&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- public int updateEmployee(Employee employee) --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">&quot;updateEmployee&quot;</span>&gt;</span></span><br><span class="line">        update t_employee</span><br><span class="line">        set empname = #&#123;empName&#125;, gender = #&#123;gender&#125;, email = #&#123;email&#125;</span><br><span class="line">        where id = #&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- public boolean deleteEmployee(Integer id) --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">delete</span> <span class="attr">id</span>=<span class="string">&quot;deleteEmployee&quot;</span>&gt;</span></span><br><span class="line">        delete from t_employee where id = #&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">delete</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- public int insertEmployee(Employee employee) --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">        让MyBatis自动的将自增id赋值给传入的employee对象的id属性</span></span><br><span class="line"><span class="comment">            useGeneratedKeys=&quot;true&quot;</span></span><br><span class="line"><span class="comment">            keyProperty=&quot;&quot;：将刚才自增的id封装给哪个属性</span></span><br><span class="line"><span class="comment">     --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">&quot;insertEmployee&quot;</span> <span class="attr">useGeneratedKeys</span>=<span class="string">&quot;true&quot;</span> <span class="attr">keyProperty</span>=<span class="string">&quot;id&quot;</span>&gt;</span></span><br><span class="line">        insert into t_employee(empname, gender, email, login_account)</span><br><span class="line">        values(#&#123;empName&#125;, #&#123;gender&#125;, #&#123;email&#125;, #&#123;loginAccount&#125;)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- public int insertEmployee2(Employee employee) --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">&quot;insertEmployee2&quot;</span>&gt;</span></span><br><span class="line">        /*</span><br><span class="line">        order=&quot;BEFORE&quot;：之前</span><br><span class="line">            在核心sql语句之前运行一个查询sql查到id，将查到的id赋值给JavaBean的哪个属性</span><br><span class="line">        */</span><br><span class="line">        <span class="tag">&lt;<span class="name">selectKey</span> <span class="attr">order</span>=<span class="string">&quot;BEFORE&quot;</span> <span class="attr">keyProperty</span>=<span class="string">&quot;id&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;integer&quot;</span>&gt;</span></span><br><span class="line">            select max(id)+2 from t_employee;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">selectKey</span>&gt;</span></span><br><span class="line">        insert into t_employee(id, empname, gender, email, login_account)</span><br><span class="line">        values(#&#123;id&#125;, #&#123;empName&#125;, #&#123;gender&#125;, #&#123;email&#125;, #&#123;loginAccount&#125;)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -197,364 +225,118 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/09/09/MyBatis%E4%B8%ADSQL%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/09/MyBatis%E7%9A%84%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/" class="archive-article-date">
-  	<time datetime="2021-09-09T06:52:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-09</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/09/09/MyBatis%E7%9A%84%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MyBatis的全局配置文件解析</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/09/09/MyBatis%E7%9A%84%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/">MyBatis的全局配置文件解析</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MyBatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#xml%E4%B8%AD%E5%90%84%E5%B1%9E%E6%80%A7%E7%9A%84%E8%A7%A3%E6%9E%90%EF%BC%88%E4%B8%8D%E5%85%A8%EF%BC%8C%E5%85%B7%E4%BD%93%E7%9C%8B%E8%A7%86%E9%A2%91%E6%88%96%E8%80%85%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">xml中各属性的解析（不全，具体看视频或者官方文档）</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/08/Git%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E6%8F%90%E4%BA%A4%E5%8F%8A%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2021-09-08T02:49:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-08</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/09/08/Git%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E6%8F%90%E4%BA%A4%E5%8F%8A%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">Git的初始化提交及相关操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/07/SpringMVC%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2021-09-07T06:07:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/09/07/SpringMVC%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E5%99%A8/">SpringMVC自定义类型转换器</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SpringMVC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/05/SpringMVC%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2021-09-05T06:07:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/09/05/SpringMVC%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96/">SpringMVC项目初始化</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SpringMVC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/02/Spring%E7%9A%84REST%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2021-09-02T06:59:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/09/02/Spring%E7%9A%84REST%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">Spring的REST问题总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SpringMVC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/01/SpringMVC%E9%85%8D%E7%BD%AE%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2021-09-01T07:46:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/09/01/SpringMVC%E9%85%8D%E7%BD%AE%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/">SpringMVC配置的一些问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SpringMVC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="archive-article-date">
-  	<time datetime="2021-06-21T13:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构绪论</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/13/Timer-%E8%AE%A1%E6%97%B6%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2021-06-13T07:08:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/13/Timer-%E8%AE%A1%E6%97%B6%E5%99%A8/">Timer()计时器</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/13/Java8%E7%9A%84%E5%85%B6%E4%BB%96%E6%96%B0%E7%89%B9%E6%80%A7/" class="archive-article-date">
-  	<time datetime="2021-05-13T02:49:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/13/Java8%E7%9A%84%E5%85%B6%E4%BB%96%E6%96%B0%E7%89%B9%E6%80%A7/">Java8的其他新特性</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -578,8 +360,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
